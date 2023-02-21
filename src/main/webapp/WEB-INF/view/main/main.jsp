@@ -2,47 +2,40 @@
     <%@ include file="../layout/header.jsp" %>
         <div class="container-fluid my_main_banner pt-4">
 
-            <body style="margin:0">
-                <div class="slider" style="overflow:hidden">
-                    <div class="slides">
-                        <img src="images/temp_banner1.jpg">
-                        <img src="images/temp_banner2.jpg">
-                        <img src="images/temp_banner3.jpg">
-                        <img src="images/temp_banner4.png">
-                    </div>
-                    <button class="prev-btn">&#10094;</button>
-                    <button class="next-btn">&#10095;</button>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-            </body>
-
-            <script>
-                const slides = document.querySelector(".slides");
-                const prevBtn = document.querySelector(".prev-btn");
-                const nextBtn = document.querySelector(".next-btn");
-                let counter = 1;
-
-                nextBtn.addEventListener("click", function () {
-                    slides.style.transform = `translateX(${-counter * 25}%)`;
-                    counter++;
-                    if (counter > 3) {
-                        counter = 0;
-                    }
-                });
-
-                prevBtn.addEventListener("click", function () {
-                    counter--;
-                    if (counter < 0) {
-                        counter = 3;
-                    }
-                    slides.style.transform = `translateX(${-counter * 25}%)`;
-                });
-            </script>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                    <img src="/images/temp_banner1.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/temp_banner2.jpg" class="d-block w-100" alt="">
+                    </div>
+                        <div class="carousel-item">
+                    <img src="/images/temp_banner3.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="/images/temp_banner4.png" class="d-block w-100" alt="">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
         <div class="container-fluid my_sub1_banner py-5">
-
         </div>
         <div class="container-fluid my_sub2_banner py-5">
-
+        
         </div>
 
         <div class="container py-3">
