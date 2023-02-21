@@ -17,7 +17,7 @@ create table enterprise_tb(
     image longtext not null,
     email varchar(100) not null,
     sector varchar(100) not null,
-    class varchar(100) not null,
+    size varchar(100) not null,
     created_at timestamp not null
 );
 
@@ -50,14 +50,16 @@ create table bookmark_tb(
     id int auto_increment primary key,
     user_id int not null unique,
     enterprise_id int not null unique,    
-    count int not null
+    count int not null,
+    created_at timestamp not null
 );
 
 create table like_tb(
     id int auto_increment primary key,
     user_id int not null unique,
     recruitment_id int not null unique,    
-    count int not null
+    count int not null,
+    created_at timestamp not null
 );
 
 create table apply_tb(
