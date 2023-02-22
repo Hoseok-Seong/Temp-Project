@@ -32,7 +32,7 @@
             </div>
         </div>
 
-//박스부
+<%-- 박스부 --%>
         <div class="container">
             <div class="my-board-box">
                 <div class="product-box">

@@ -52,7 +52,7 @@ a {
 }
 
 .product-box {
-    width: 250px;
+    width: 25%;
     height: 150px;
     /* border: solid yellow; */
     margin: 5px;
@@ -60,6 +60,6 @@ a {
 }
 
 .card-img-top {
-    width: 250px;
+    width: 100%;
     height: 100px;
 }
